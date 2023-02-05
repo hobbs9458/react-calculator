@@ -1,3 +1,7 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +9,52 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(to right, rgba(2,0,36,1) 0%, rgba(254,55,217,0.8979924733565301) 0%, rgba(0,187,255,0.75) 100%)
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+button {
+  border-radius: 0;
+  border: .2px solid rgb(136, 136, 136);
+}
+.btn-bottom-left {
+  border-bottom-left-radius: 5px;
+}
+.btn-bottom-right {
+  border-bottom-right-radius: 5px;
+}
+
+.calculator-grid {
+  display: grid;
+  width: 384px;
+  margin: 2rem auto 0;
+  grid-template-columns: repeat(4, 6rem);
+  grid-template-rows: minmax(7rem, auto) repeat(5, 6rem);
+}
+
+.span-two {
+  grid-column: span 2;
+}
+
+/* temp */
+.output {
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  background: rgba(60, 58, 58, 0.9);
+  color: white;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  grid-column: 1 / -1;
+}
+
+.output .previous-operand {
+  font-size: 1.5rem;
+  color: rgba(245, 239, 239, 0.752)
+}
+
+.output .current-operand {
+  font-size: 2.5rem;
+  color: rgba(248, 243, 243, 0.964)
 }
