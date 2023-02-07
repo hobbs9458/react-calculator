@@ -15,6 +15,8 @@ body {
 button {
   border-radius: 0;
   border: .2px solid rgb(136, 136, 136);
+  cursor: pointer;
+  outline: none;
 }
 .btn-bottom-left {
   border-bottom-left-radius: 5px;
@@ -25,10 +27,10 @@ button {
 
 .calculator-grid {
   display: grid;
-  width: 384px;
   margin: 2rem auto 0;
   grid-template-columns: repeat(4, 6rem);
   grid-template-rows: minmax(7rem, auto) repeat(5, 6rem);
+  justify-content: center;
 }
 
 .span-two {
@@ -47,6 +49,8 @@ button {
   align-items: flex-end;
   justify-content: space-around;
   grid-column: 1 / -1;
+  word-wrap: break-word;
+  word-break: break-all;
 }
 
 .output .previous-operand {
